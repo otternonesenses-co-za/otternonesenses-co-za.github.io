@@ -8,14 +8,14 @@
 {name: "Otter nonesense",
 link: "/"
 }} sections={[
-    {
-        name: "test",
-        link:"https://www.google.com" ,
-    },
-    {
-        name: "Test2",
-        link: "https://www.google.com"
-    }
+    // {
+    //     name: "test",
+    //     link:"https://www.google.com" ,
+    // },
+    // {
+    //     name: "Test2",
+    //     link: "https://www.google.com"
+    // }
 ]}/>
 
 <Background />

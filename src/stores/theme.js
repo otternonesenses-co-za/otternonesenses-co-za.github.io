@@ -1,3 +1,3 @@
 import { writable} from 'svelte/store'
 
-export const light_mode = writable(true)
+export const light_mode = writable(false)
