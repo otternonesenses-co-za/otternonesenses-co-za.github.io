@@ -1,7 +1,6 @@
 
 <script>
     import { onMount } from "svelte";
-    import SidePanel from "../components/side-panel.svelte";
     import About from "../components/about.svelte"
     import Timeline from "../components/timeline.svelte";
     // import * as THREE from 'three'
@@ -57,7 +56,7 @@
 <!-- <img src="/20200720_104237-01-removebg.png" class="cover-image {loaded ? "loaded" : ""}" /> -->
 <div class="main-container box center">
     <h1 class="main-title" >{out_title}</h1>
-    <h2 class="sub-title">Software dev extrodinare</h2>
+    <h2 class="sub-title">Software developer</h2>
 </div>
 </div>
 
