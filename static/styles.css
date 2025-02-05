@@ -1,16 +1,22 @@
 
 
 :root {
-    --black: #09122C;
-    --white: #F5EFFF;
-    --primary: #E5D9F2;
-    --secondary: #CDC1FF;
-    --tertiary: #A294F9;
+    --black: #F5EFFF;
+    --white: #1A1A1D;
+    --primary: #3B1C32;
+    --secondary: #6A1E55;
+    --tertiary: #A64D79;
+    --border: #3A3A40;
+    --highlight: #FFDE4D;
+    
     /* --bg-image: url('/Motion Background GIF by Trakto.gif'); */
     /* --bg-size: auto */
 
 }
 
+.float-right {
+    margin-left: 200px;
+}
 
 body, html {
     font-family: "IBM Plex Serif", serif;
@@ -28,11 +34,13 @@ body {
 }
 
 body.dark-mode {
-    --black: #F5EFFF;
-    --white: #1A1A1D;
-    --primary: #3B1C32;
-    --secondary: #6A1E55;
-    --tertiary: #A64D79;
+    --black: #09122C;
+    --white: #F5EFFF;
+    --primary: #E5D9F2;
+    --secondary: #CDC1FF;
+    --tertiary: #A294F9;
+    --border: lightgray;
+    --highlight: #B2A5FF;
     /* --bg-image: url('/max-van-den-oetelaar-uymG7UVPXpI-unsplash.jpg'); */
     /* --bg-size: cover; */
 }
@@ -43,7 +51,7 @@ body.dark-mode {
     border-radius: 10px;
     padding: 20px 100px;
     margin: 50px;
-    box-shadow: 5px 10px 10px var(--black);
+    box-shadow: 0px 10px 30px -25px var(--highlight);
     width: fit-content;
 }
 

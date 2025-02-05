@@ -1,6 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import * as d3 from "d3";
+    import { lightPosition } from "three/src/nodes/TSL.js";
     /*
      * A speed-improved perlin and simplex noise algorithms for 2D.
      *
@@ -36,9 +37,11 @@
         mousey = event.clientY;
     };
 
-    let colours = ["#F45050", "#9195F6", "#ffffff"];
+    export let dark = true;
+    let dark_colours = ["#F45050", "#9195F6", "#ffffff"];
+    let light_colours = ["#CDC1FF", "#ffffff"];
 
-    const gradient = d3.scaleLinear(colours);
+    const gradient = d3.scaleLinear(dark ? dark_colours : light_colours);
 
     let noise;
     let noiseMachine;
@@ -46,8 +49,8 @@
     let context;
 
     let z = Math.random() * 222;
-    let spd = 10;
-    let scale = 0.002;
+    export let spd = 5;
+    export let scale = 0.0025;
 
     onMount(async () => {
         noiseMachine = await import("noisejs");
@@ -73,10 +76,12 @@
     };
 
     const render = () => {
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        let pos = 10;
+        setTimeout(() => requestAnimationFrame(render), 1000 / fps);
 
-        for (let x = 0; x < canvas.width + 10; x += pos) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        let pos = 15;
+
+        for (let x = 0; x < canvas.width + 2; x += pos) {
             for (let y = 0; y < canvas.height; y += pos) {
                 let value = getValue(x, y, z, scale);
 
@@ -91,8 +96,8 @@
                 context.save();
                 context.beginPath();
                 context.translate(x, y);
-                let val = Math.abs(4 * value);
-                context.arc(0, 0, val, 0, Math.PI * 4, true);
+                let val = Math.abs(2* value);
+                context.arc(0, 0, val, 0, Math.PI * 2, true);
                 value = Math.min(Math.abs(value), 1);
                 context.fillStyle = gradient(value);
                 context.fill();
@@ -101,8 +106,6 @@
         }
 
         z += spd;
-
-        setTimeout(() => requestAnimationFrame(render), 1000 / fps);
     };
 </script>
 

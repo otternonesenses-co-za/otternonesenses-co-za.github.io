@@ -27,12 +27,14 @@
 		"vite": "^5.4.11"
 	},
 	"dependencies": {
+		"@bulatdashiev/svelte-slider": "^1.0.3",
 		"@supabase/supabase-js": "^2.48.0",
 		"@sveltejs/adapter-static": "^3.0.8",
 		"body-parser": "^1.20.3",
 		"d3": "^7.9.0",
 		"express": "^4.21.2",
 		"noisejs": "^2.1.0",
+		"svelte-social-media-icons": "^0.0.3",
 		"three": "^0.172.0"
 	}
 }
