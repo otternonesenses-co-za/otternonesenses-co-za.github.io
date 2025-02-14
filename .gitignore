@@ -8,6 +8,13 @@ node_modules
 /.svelte-kit
 /build
 
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.gif
+*.mtl
+*.obj
 # OS
 .DS_Store
 Thumbs.db

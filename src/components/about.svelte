@@ -1,34 +1,74 @@
 <script>
 
+    import Parallax from "./parallax.svelte";
+
 </script>
 
-<div class="container">
-    <div class="content">
-        <h2 class="heading">A little about me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed sodales diam. Pellentesque sed tempor tellus. Mauris molestie risus vulputate diam iaculis venenatis. Nulla dignissim felis eu cursus facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris est velit, malesuada sit amet orci ut, aliquam posuere ex. Donec fermentum rutrum suscipit. Sed nec orci sollicitudin, convallis ligula in, ultrices lectus. Morbi euismod hendrerit massa sed ornare. Nunc ac leo non purus dictum rhoncus.</p>
-            
-        <p>Duis sit amet quam vestibulum, finibus nulla ac, accumsan augue. Suspendisse potenti. Suspendisse quam velit, faucibus ut fermentum at, iaculis eget arcu. Maecenas pulvinar ligula leo, vel convallis velit gravida id. Proin sollicitudin, nibh id accumsan iaculis, tortor ex consequat odio, eu pretium quam metus non eros. Mauris tortor turpis, ornare quis rutrum quis, lobortis nec neque. Maecenas eget mauris quis orci lacinia feugiat vel eget lacus. Nulla id odio eu turpis venenatis sollicitudin sit amet at est. Sed nisi elit, pellentesque non suscipit quis, aliquet et quam. Maecenas at metus convallis, fermentum ante at, consequat nibh. Suspendisse eu ipsum eget ex luctus molestie ut et nunc. Suspendisse gravida fringilla arcu facilisis consectetur. Nunc fringilla nibh purus, non consequat eros sagittis ut. Aenean pellentesque ultricies malesuada. In vitae lobortis magna, vel pellentesque ligula. /p>
-    </div>
-    <img src="/20210930_220329.jpg"/>
+<div class="outer-container">
+    <Parallax />
 
+    <div class="container">
+    <img width="50%" height="50%" src="/20210930_220329.jpg"/>
+
+    <div class="content">
+        <h1 class="heading">A little about me</h1>
+        <p>Hey there! 👋</p>
+
+        <p>I'm Ciaran Otter, a curious coder, problem-solver, and all-around tech enthusiast. Whether it's building scalable backend systems, experimenting with quantum circuits, or tinkering with game development, I love exploring the intersection of creativity and technology.</p>
+
+        <p>When I'm not knee-deep in code, you’ll probably find me debugging my own life decisions over a cup of coffee, brainstorming the next big project, or lost in a strategy game (because who doesn’t love a good challenge?).</p>
+
+        <p>This portfolio is a little glimpse into my world—projects I’ve built, things I’ve broken (and fixed!), and ideas I’m excited about. So, take a look around, and if you want to chat about tech, gaming, or just share cool memes, hit me up!</p>
+        
+    
+        </div>
+
+</div>
 </div>
 
 <style>
+
+
+@media  screen and (max-width: 650px) {
+    .container {
+        display: block !important;
+    }
+    img {
+        /* width: 100%; */
+    }
+}
     img {
         border-radius: 100%;
-        width: 30%;
-        /* height: 50%; */
+        width: 30vw;
+        height: 30vw;
+        /* height: 200px; */
         flex: 1;
+        /* padding */
         border: 1px solid var(--border);
+        z-index: 5;
+        margin-right: 20px;
+        /* aspect-ratio: 1/1 auto; */
+        /* width: 50%;
+        height: 50%; */
     }
 
     .container {
         display: flex;
+        position: relative;
+        z-index: 5;
+        padding: 50px;
+        height: 100%;
+    }
+
+    .outer-container {
+        position: relative;
+        height: 100vh;
     }
 
     .content {
         flex: 2;
-        padding: 10px
+        padding: 10px;
+        z-index: 5;
     }
 
     .heading {

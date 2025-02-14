@@ -160,7 +160,8 @@ function updateMouse(event) {
     .container {
         position: relative;
         /* bottom: 0 */
-        height: 100vh;
+        /* height: 100vh; */
+        height: 100%;
         width: 160vw;
         background-color: var(--white);
         overflow-y: hidden;
@@ -170,7 +171,11 @@ function updateMouse(event) {
     }
 
     .outer-container {
-  overflow-x: hidden;
-  width: 100vw;
+        overflow-x: hidden;
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        /* top: 0; */
+        z-index: 1;
     }
 </style>

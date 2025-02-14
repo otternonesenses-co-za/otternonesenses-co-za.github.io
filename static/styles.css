@@ -8,6 +8,13 @@
     --tertiary: #A64D79;
     --border: #3A3A40;
     --highlight: #FFDE4D;
+
+    --para_1:#3b1c32;
+    --para_2: #644259;
+    --para_3: #8f6a83;
+    --para_4: #bc96af;
+    --para_5: #ecc3de;
+    --para_6: #F5E0EE;
     
     /* --bg-image: url('/Motion Background GIF by Trakto.gif'); */
     /* --bg-size: auto */
@@ -41,10 +48,23 @@ body.dark-mode {
     --tertiary: #A294F9;
     --border: lightgray;
     --highlight: #B2A5FF;
+
+    --para_1: #cdc1ff;
+    --para_2: #ffbaf4;
+    --para_3: #ffb6d2;
+    --para_4: #ffc1a4;
+    --para_5: #ffda7c;
+    --para_6: #f9f871;
     /* --bg-image: url('/max-van-den-oetelaar-uymG7UVPXpI-unsplash.jpg'); */
     /* --bg-size: cover; */
 }
 
+@media  screen and (max-width: 650px) {
+    .box {
+        padding: 10px 20px !important;
+        /* margin: 0px !important; */
+    }
+}
 
 .box {
     border: 1px solid var(--black);

@@ -3,6 +3,9 @@
     import { onMount } from "svelte";
     import About from "../components/about.svelte"
     import Timeline from "../components/timeline.svelte";
+    import Skills from "../components/skills.svelte"
+    import Parallax from "../components/parallax.svelte";
+    import Guitar from "../components/Guitar.svelte";
     // import * as THREE from 'three'
     // import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
     // import { ConvexObjectBreaker, OBJLoader } from "three/examples/jsm/Addons.js";
@@ -31,6 +34,7 @@
     const title = "Ciaran Otter"
     let out_title = ""
     let index = 0
+    let show_cursor = false
 
     const typer = setInterval(addChar, 100)
 
@@ -38,6 +42,10 @@
         out_title = out_title + title[index]
 
         if (index >= title.length-1) {
+            setInterval(() => {
+                show_cursor = !show_cursor
+            
+            }, 500);
             clearInterval(typer)
         }
 
@@ -52,13 +60,20 @@
     ]
 } -->
 
+
+
 <div class="title-container">
 <!-- <img src="/20200720_104237-01-removebg.png" class="cover-image {loaded ? "loaded" : ""}" /> -->
 <div class="main-container box center">
-    <h1 class="main-title" >{out_title}</h1>
+    <!-- <div class="main-title"> -->
+    <h1 class="main-title">{out_title}</h1>
+    <!-- </div> -->
     <h2 class="sub-title">Software developer</h2>
+    <!-- <h2 class="sub-title">Building cool things, breaking fewer things, learning everything.</h2> -->
 </div>
 </div>
+
+<!-- <Guitar /> -->
 
 <div class="body">
 
@@ -88,30 +103,51 @@ I love making programs and teach the computer how to do interesting things. I le
 
 </div> -->
 
-<!-- <About /> -->
-<!-- <Timeline /> -->
+
+
+
+<About />
+<div class="spacer"></div>
+<Timeline />
+
+<Skills />
+
 </div>
 
 
 
 <style>
-    .main-title {
-        font-weight: 100;
-        font-size: 5rem;
-        text-align: center;
-        /* border: 1px solid red; */
-        line-height: 0;
-        color: var(--highlight);
-        font-family: "Zilla Slab Highlight", serif;
-  font-weight: 400;
-  font-style: normal;
+
+@media only screen and (max-width: 650px) {
+
+}
+
+    .spacer {
+        padding: 20vh;
     }
 
+    .main-title{
+        font-family: "Zilla Slab Highlight", serif;
+        font-weight: 400;
+        font-style: normal;
+        /* font-weight: 100; */
+        font-size: 5rem;
+        /* color: var(--white); */
+        color: var(--highlight);
+        /* line-height: 0.5; */
+        display: inline-block;
+        /* line-height: 0.5em; */
+        /* border: 1px solid red; */
+        margin: 0px !important;
+        padding: 0px !important
+
+    }
     .sub-title {
         font-weight: 700;
         font-size: 1rem;
-        line-height: 0;
-        padding: 0 1em;
+        /* border: 1px solid red; */
+        /* line-height: 0; */
+        /* padding: 0 1em; */
     }
 
     .section {
@@ -163,17 +199,18 @@ I love making programs and teach the computer how to do interesting things. I le
         background-color: var(--white);
         margin: auto;
         margin-top: 50vh;
+        padding-top: 50px;
         transform: translateY(-50%);
         border: 1px solid var(--border) !important;
         opacity: 95%;
-
+        
         /* transform: translateY(-50%); */
     }
 
     .body {
         background: var(--white);
         /* margin: none; */
-        padding: 50px;
+        /* padding: 50px; */
         z-index: 1000;
     }
 </style>
