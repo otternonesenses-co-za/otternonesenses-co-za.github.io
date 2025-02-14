@@ -15,6 +15,7 @@ node_modules
 *.gif
 *.mtl
 *.obj
+!/static/20210930_220329.jpg
 # OS
 .DS_Store
 Thumbs.db
