@@ -107,10 +107,10 @@ I love making programs and teach the computer how to do interesting things. I le
 
 
 <About />
-<div class="spacer"></div>
-<Timeline />
+<!-- <div class="spacer"></div> -->
+<!-- <Timeline />
 
-<Skills />
+<Skills /> -->
 
 </div>
 
