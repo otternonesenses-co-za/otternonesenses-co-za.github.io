@@ -4,7 +4,7 @@
 
 </script>
 
-<div class="outer-container">
+<div id="about" class="outer-container">
     <Parallax />
 
     <div class="container">

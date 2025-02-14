@@ -1,5 +1,8 @@
 <script>
-    export let sections
+    export let sections = [{
+      name: "About",
+      link: '/#about'
+    }]
     export let home
 
     import { light_mode } from '../stores/theme'

@@ -106,7 +106,7 @@ I love making programs and teach the computer how to do interesting things. I le
 
 
 
-<About />
+<About id="about" />
 <!-- <div class="spacer"></div> -->
 <!-- <Timeline />
 
